@@ -1,15 +1,14 @@
+//Maven
 <properties>
   <maven.compiler.source>8</maven.compiler.source>
   <maven.compiler.target>8</maven.compiler.target>
 </properties>
 
-
-
 </dependencies>
 <build>
   <plugins>
     <plugin>
-    <groupId>org.codehause.mojo</groupId>
+    <groupId>org.codehause.mojo</groupId>    
     <artifactId>exec-maven-plugin</artifactId>
     <version>3.0.0</version>
     <executions>
@@ -26,3 +25,21 @@
 </plugins>
 </build>
 </project>
+
+mvn -version
+sudo apt update
+sudo apt install maven
+mvn archetype:generate -DgroupId=com.example -DartifactId=MyApp -DinterativeMode=false
+cd MyApp
+tree
+sudo apt install tree
+mvn compile
+mvn exec:java
+mvn package
+
+//Jenkins
+ngrok http 8080
+/github-webhook/
+sudo nautilus
+sudo chown -R jenkins:jenkins /var/www/html/folder_name
+cp -r * /var/www/html/folder_name/
